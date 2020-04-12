@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder> {
+public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder>{
 
     private ArrayList<User> mArrayUsers;
 
@@ -46,7 +46,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder
         User user = mArrayUsers.get(position);
         holder.mImeage.setImageResource(user.getImage());
         holder.mTvName.setText(user.getName());
-        holder.mTvAge.setText(user.getAge());
+        holder.mTvAge.setText(String.valueOf(user.getAge()));
     }
 
     @Override
