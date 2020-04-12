@@ -29,21 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         //cập nhật dữ liệu
-        mUserArrayList.add(new User("Nguyen van A",10,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van B",11,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van C",12,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van D",13,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van E",14,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van F",15,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van G",16,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van H",17,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van E",18,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van K",19,R.mipmap.ic_launcher));
-        mUserArrayList.add(new User("Nguyen van M",20,R.mipmap.ic_launcher));
+       mUserArrayList.add(new User("Bánh Mì","Bate", R.drawable .hinh_banh_mi, "20.000VND"));
+       mUserArrayList.add(new User("Bánh Khọt","Tôm Đậu", R.drawable .hinh_mon_banh_khot, "50.000VND"));
+       mUserArrayList.add(new User("Bìg Ngói Chiên","Giòn Giòn", R.drawable.hinh_mon_bi_ngoi_chien_xu, "100.000VND"));
+       mUserArrayList.add(new User("Bún Mắm", "Miền Tây", R.drawable.hinh_mon_bun_mam, "30.000VND"));
+       mUserArrayList.add(new User("Bún Rêu", "Cua Đồng", R.drawable.hinh_mon_bun_reu, "40.000VND"));
+       mUserArrayList.add(new User("Cua Biển", "Rang Me", R.drawable.hinh_mon_cua,"900.000VND"));
 
         mUserAdapter.submitData(mUserArrayList);
 
-        mUserAdapter.addItem(new User("Nguyen Van N",21,R.mipmap.ic_launcher));
+
 
     }
 

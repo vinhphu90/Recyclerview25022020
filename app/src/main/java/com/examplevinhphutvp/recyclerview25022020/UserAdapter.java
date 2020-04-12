@@ -46,7 +46,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder
         User user = mArrayUsers.get(position);
         holder.mImeage.setImageResource(user.getImage());
         holder.mTvName.setText(user.getName());
-        holder.mTvAge.setText(String.valueOf(user.getAge()));
+        holder.mTvdescribe.setText(user.getDescribe());
+        holder.mTvprice.setText(String.valueOf(user.getPrice()));
+
     }
 
     @Override
@@ -57,12 +59,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHolder
     class ItemViewHolder extends RecyclerView.ViewHolder {
 
         ImageView mImeage;
-        TextView mTvName , mTvAge;
+        TextView mTvName , mTvdescribe, mTvprice;
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
-            mTvAge = itemView.findViewById(R.id.textviewAge);
+            mTvdescribe = itemView.findViewById(R.id.textviewdescribe);
             mImeage = itemView.findViewById(R.id.imageview);
             mTvName = itemView.findViewById(R.id.textviewName);
+            mTvprice = itemView.findViewById(R.id.texetviewprice);
         }
     }
 }
