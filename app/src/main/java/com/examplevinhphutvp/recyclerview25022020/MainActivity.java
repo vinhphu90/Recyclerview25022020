@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         //cập nhật dữ liệu
        mUserArrayList.add(new User("Bánh Mì","Bate", R.drawable .hinh_banh_mi, "20.000VND"));
        mUserArrayList.add(new User("Bánh Khọt","Tôm Đậu", R.drawable .hinh_mon_banh_khot, "50.000VND"));
@@ -37,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
        mUserArrayList.add(new User("Cua Biển", "Rang Me", R.drawable.hinh_mon_cua,"900.000VND"));
 
         mUserAdapter.submitData(mUserArrayList);
+
+        mUserAdapter.setOnItemClickListener(new OnListenerClickItem() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(MainActivity.this, mUserArrayList.get(position).getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
